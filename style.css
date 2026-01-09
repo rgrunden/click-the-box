@@ -20,6 +20,54 @@ body {
   position: absolute;
   cursor: pointer;
 }
+ 
+/* Mobile-friendly defaults */
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation; /* helps stop double-tap zoom */
+}
+
+/* Prevent annoying selections while tapping */
+* {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Make button/target easier to tap on phones */
+#target, .target, button {
+  touch-action: manipulation;
+}
+
+/* Combo text */
+.combo {
+  font-weight: 700;
+  margin-top: 8px;
+  opacity: 0.9;
+}
+
+/* Responsive sizing */
+@media (max-width: 600px) {
+  .container, .app, .game, .card {
+    width: 100%;
+    max-width: 100%;
+    padding: 12px;
+  }
+
+  #target, .target {
+    min-width: 80px;
+    min-height: 80px; /* big finger target */
+  }
+
+  button {
+    min-height: 44px; /* Apple/Google tap target guideline */
+    font-size: 16px;
+  }
+}
 
 .stats {
   display: flex;
@@ -47,3 +95,10 @@ body {
   border-radius: 10px;
   width: 260px;
 }
+
+#box {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
