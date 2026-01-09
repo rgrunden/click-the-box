@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Click the Box</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"
+</head>
+<body>
+
+  <h1>🎯 Click the Box</h1>
+
+  <div class="stats">
+  <p>Score: <span id="score">0</span></p>
+  <p>High: <span id="highScore">0</span></p>
+  <p>Time: <span id="time">30</span>s</p>
+  </div>
+
+  <button id="startBtn">Start</button>
+
+  <div id="game-area">
+    <div id="box"></div>
+
+  <div id="overlay">
+    <div class="panel">
+        <h2 id="gameOverTitle">Game over</h2>
+        <p>Your score: <span id="finalScore"></span></p>
+        <button id="restartBtn">Play Again</button>
+    </div>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
